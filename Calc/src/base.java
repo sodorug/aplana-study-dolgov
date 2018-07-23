@@ -1,3 +1,5 @@
+import javafx.beans.value.WritableObjectValue;
+
 import java.util.Scanner;
 
 public class base {
@@ -35,7 +37,14 @@ public class base {
             }
         }
         else  if(type.startsWith("2")) {
-            System.out.println("Вы выбрали массив слов");
+            System.out.println("Вы выбрали массив слов, введите разменость массива");
+            int size = scan.nextInt();
+            String[] Slova = new String[size];
+            System.out.println("Заполните массив значениями");
+            for (int i = 0; i<size;i++)  {
+                Slova[i]= scan.next();
+            }
+            System.out.println(Slova.length);
         }
         }
 }
